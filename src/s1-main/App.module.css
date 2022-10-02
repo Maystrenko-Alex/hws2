@@ -3,13 +3,17 @@
 }
 
 .hw {
-   
-        
+    
 }
 
 .hwTitle {
+    border: 1px solid #D9D9D9;
+    border-style: ridge none ridge none;
+    padding: 30px 0 10px 0;
     font-weight: 600;
     font-size: 22px;
     line-height: 27px;
     color: #000000;
+    margin: 50px 0;
+    
 }
