@@ -1,31 +1,49 @@
 .message {
-
+margin-top: 5px;
 }
 
 .imageAndText {
+  display: flex;
+  flex-direction: row-reverse;
+ 
 
 }
 
 .imageAndText img {
-
+  width: 48px;
+  height: 48px;
 }
 
 .text {
-
+  background-color: #0066CC;
+  /* width: fit-content; */
+  border-radius: 5px;
+  color: #FFFFFF;
+  padding: 5px;
+  text-align: end;
 }
 
-.text:after {
-
-}
+.text:after {}
 
 .name {
-
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+ 
 }
 
 .messageText {
 
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .time {
-
+  padding-right: 12px;
+  color: #000000;
+  text-align: end;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 12px;
 }
