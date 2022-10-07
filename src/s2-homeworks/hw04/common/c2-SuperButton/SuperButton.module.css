@@ -1,16 +1,27 @@
 .button {
+  padding: 5px, 24px, 5px, 24px;
+  /* font-style: SemiBold; */
+  font-size: 14px;
+  
+  
 }
 
 .disabled {
+  background-color: #7a92aa;
+  color: #D1D1D1;
 }
 
 .secondary {
 }
 
 .default {
+  background-color: #0066CC;
+  color: #FFFFFF;
 }
 
 .red {
+  background-color: #CC1439;
+  color: white;
 }
 
 .default:hover {
