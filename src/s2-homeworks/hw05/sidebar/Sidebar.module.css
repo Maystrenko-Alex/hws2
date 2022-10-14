@@ -1,10 +1,14 @@
 .sidebar {
+  
 }
 
 .sidebar.open {
+  width: 350px;
+  background-color: white;
 }
 
 .background {
+  
 }
 
 .nav {
@@ -17,6 +21,7 @@
 }
 
 .nav a.active {
+  color: #58ACFF;
 }
 .close {
 }
