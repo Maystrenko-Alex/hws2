@@ -6,18 +6,20 @@
   height: 36px;
   font-size: 16px;
   border-radius: 5px;
-  padding-left: 5px;
+  padding-left: 10px;
   border: 1px solid #D1D1D1;
+}
+.input:focus {
+outline: none;
 }
 
 .inputWrapper {
   display: flex;
   flex-direction: column-reverse;
-  /* padding-top: 20px; */
+  /*  padding-top: 20px; */
 }
 
 .superInput {
- 
 }
 
 .errorInput {

@@ -1,11 +1,28 @@
 .spanBlock {
+  display: flex;
+  align-items: flex-end;
+  min-height: 53px;
+
+}
+.spanBlock input{
+  font-size: 16px;
+  
+}
+.spanBlock input:hover{
+  border: 1px solid #D1D1D1;
 }
 
+
+
 .span {
+  color: #0080FF;
+  /* height: 50px; */
 }
 
 .input {
+
 }
 
 .pen {
+  margin-right: 10px;
 }
