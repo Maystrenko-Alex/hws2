@@ -36,6 +36,7 @@ const SuperRadio: React.FC<SuperRadioPropsType> = ({
 }) => {
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
         // делают студенты
+        onChangeOption?.(Number(e.currentTarget.value))
     }
 
     const finalRadioClassName = s.radio + (className ? ' ' + className : '')
@@ -43,25 +44,28 @@ const SuperRadio: React.FC<SuperRadioPropsType> = ({
 
     const mappedOptions: any[] = options
         ? options.map((o) => (
-              <label key={name + '-' + o.id} className={s.label}>
-                  <input
-                      id={id + '-input-' + o.id}
-                      className={finalRadioClassName}
-                      type={'radio'}
-                      // name, checked, value делают студенты
-
-                      onChange={onChangeCallback}
-                      {...restProps}
-                  />
-                  <span
-                      id={id + '-span-' + o.id}
-                      {...spanProps}
-                      className={spanClassName}
-                  >
-                      {o.value}
-                  </span>
-              </label>
-          ))
+            <label key={name + '-' + o.id} className={s.label}>
+                <input
+                    id={id + '-input-' + o.id}
+                    className={finalRadioClassName}
+                    type={'radio'}
+                    // name, checked, value делают студенты
+                    value={o.id}
+                    name={o.value}
+                    checked={value === o.id ? true : false}
+                    onChange={onChangeCallback}
+                    //   onChange={(e)=>console.log(e.currentTarget.name)}
+                    {...restProps}
+                />
+                <span
+                    id={id + '-span-' + o.id}
+                    {...spanProps}
+                    className={spanClassName}
+                >
+                    {o.value}
+                </span>
+            </label>
+        ))
         : []
 
     return <div className={s.options}>{mappedOptions}</div>
