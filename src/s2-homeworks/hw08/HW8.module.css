@@ -1,23 +1,65 @@
 .item {
+  height: 54px;
+  
+}
+.item>tr{
+  border-bottom-color: #E5E5E5;
+  border-bottom-style: solid ;
+  border-bottom-style: 1px;
 }
 
 .item:last-of-type {
+  
 }
-
-.users {
+.item:last-child{
+  border-bottom: none;
+}
+.users{
+  border-spacing: 0;
+}
+.users:first-child {
+  /* width: 600px; */
+  /* box-sizing: border-box; */
+  /* background-color: #E5E5E5; */
 }
 
 .buttonsContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
 }
-
+.buttonsContainer button {
+  margin-left: 20px;
+}
 .container {
+  width: 600px;
 }
 
 .thead {
+  height: 32px;
+  background-color: #E5E5E5;
+  font-weight: 600;
+}
+
+.thead tr {
+
 }
 
 .nameCol {
+  width: 300px;
+  padding-left: 10px;
+  /* border-color-bottom: #E5E5E5; */
+  border-bottom-color: #E5E5E5;
+  border-bottom-style: solid;
+  border-bottom-style: 1px;
+
 }
 
 .ageCol {
+  width: 300px;
+  padding-left: 10px;
+  border-bottom-color: #E5E5E5;
+  border-bottom-style: solid ;
+  border-bottom-style: 1px;
+  font-weight: 600;
 }
