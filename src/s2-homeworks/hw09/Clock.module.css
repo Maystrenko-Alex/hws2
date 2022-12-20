@@ -1,14 +1,31 @@
 .buttonsContainer {
+  display: flex;
+  gap: 21px;
+  
 }
 
 .clock {
+  min-height: 70px;
+  
 }
 
 .watch {
+  font-size: 20px;
+  
 }
 
 .watch strong {
 }
 
 .more {
+  min-height: 25px;
+  padding-bottom: 25px;
+  color: rgb(178, 174, 174);
+}
+.colorBtn {
+  color: white;
+  border: none;
+}
+.btn {
+  border: none;
 }

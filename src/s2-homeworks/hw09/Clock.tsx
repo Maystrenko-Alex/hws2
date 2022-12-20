@@ -15,7 +15,7 @@ function Clock() {
         stop();
         const id = setInterval( ()=> { setDate(new Date())} , 1000)
         setTimerId(Number(id));
-        saveState('hw9-date', id)
+        saveState('hw9-id', id)
         
     }
     
@@ -23,7 +23,7 @@ function Clock() {
         // пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
         clearInterval(timerId);
         setTimerId(undefined);
-  
+        saveState('hw9-date', Date.now())
     }
 
     const onMouseEnter = () => { // пишут студенты // показать дату если наведена мышка
@@ -36,7 +36,7 @@ function Clock() {
     const allDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
     const allMonth = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     // const stringTime = 'date->time' || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
-    const stringTime = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds()
+    const stringTime = date.getHours() + ':' + date.getMinutes() + ':' + (date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds() )
     // const stringTime = date.toLocaleTimeString();
 
     // const stringDate = 'date->date' || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
@@ -81,6 +81,7 @@ function Clock() {
                     id={'hw9-button-start'}
                     disabled={timerId === undefined ? false : true} // пишут студенты // задизэйблить если таймер запущен
                     onClick={start}
+                    className={timerId === undefined ? s.btn : s.colorBtn}
                 >
                     start
                 </SuperButton>
@@ -88,6 +89,7 @@ function Clock() {
                     id={'hw9-button-stop'}
                     disabled={timerId === undefined ? true : false} // пишут студенты // задизэйблить если таймер не запущен
                     onClick={stop}
+                    className={timerId === undefined ? s.colorBtn : s.btn}
                 >
                     stop
                 </SuperButton>
